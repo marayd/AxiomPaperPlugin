@@ -29,7 +29,7 @@ public class AxiomPlaceholderExpansion extends PlaceholderExpansion {
     @Override
     public String onRequest(OfflinePlayer player, @NotNull String params) {
         if (params.equals("can_use_axiom")) {
-            plugin.canUseAxiom(player.getPlayer());
+            return String.valueOf(plugin.canUseAxiom(player.getPlayer()));
         }
         return null;
     }
