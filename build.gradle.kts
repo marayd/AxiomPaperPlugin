@@ -24,6 +24,7 @@ repositories {
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://maven.enginehub.org/repo/")
     maven("https://maven.playpro.com")
+    maven("https://repo.extendedclip.com/releases/")
 }
 
 dependencies {
@@ -47,6 +48,9 @@ dependencies {
 
     // CoreProtect support
     compileOnly(libs.coreprotect)
+
+    // Placeholder API support
+    compileOnly("me.clip:placeholderapi:2.11.6")
 }
 
 tasks {

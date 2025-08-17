@@ -327,6 +327,16 @@ public class AxiomPaper extends JavaPlugin implements Listener {
         if (CoreProtectIntegration.isEnabled()) {
             this.getLogger().info("CoreProtect integration enabled");
         }
+
+        registerPlaceholder();
+    }
+
+    private void registerPlaceholder() {
+        if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
+            new AxiomPlaceholderExpansion(this).register();
+        } else {
+            getLogger().info("PlaceholderAPI not found, skipping Axiom placeholders registration");
+        }
     }
 
     private enum LargePayloadBehaviour {
